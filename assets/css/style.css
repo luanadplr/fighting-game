@@ -1,0 +1,110 @@
+@font-face {
+    font-family: 'monogram';
+    src: url('/assets/font/monogram.ttf') format('ttf');
+}
+
+*{
+    font-family: 'monogram', monospace;
+}
+
+body{
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+}
+
+.fight-area{
+    display: flex;
+    background: #f00 url("/assets/imgs/background.png") no-repeat;
+    background-size: cover;
+    width: 440px;
+    height: 250px;
+    padding: 20px;
+    gap: 30px;
+}
+
+#warrior,
+#enemy{
+    flex: 1;
+    color: #fff;
+}
+
+.character-area{
+    display: flex;
+    flex-flow: column;
+
+    .character{
+        display: flex;
+        flex: row wrap;
+    
+        .character-icon{
+            border: 3px solid #9118bc;
+            background-color: #333;
+            width: 52px;
+        }
+
+        .character-features{
+            flex: 2;
+        }
+
+        .lifebar{
+            height: 15px;
+            border: 3px solid #9118bc;
+
+            .bar{
+                height: inherit;
+                background-color: #fff;
+            }
+        }
+
+        .skills{
+            display: flex;
+            flex-flow: row;
+
+            img{
+                border: 3px solid #9118bc;
+            }
+
+            p{
+                background-color: #000;
+                height: 32px;
+                padding: 0 5%;
+                margin: 0;
+                border: 3px solid #9118bc;
+                font-size: 18px;
+            }
+        }
+    }
+
+    .character-name{
+        margin: 0 0 30px 0;
+        font-size: 40px;
+        font-weight: 400;
+        text-shadow: 2px 2px 0 rgba(0,0,0,1),
+            -2px 0 0 #cb4df9;
+    }
+
+    .character-actions{
+        display: flex;
+        flex-flow: column;
+
+        .character-img{
+            width: max-content;
+        }
+
+        .attack-button{
+            margin: 20px 0 0 0;
+            font-size: 18px;
+            box-shadow: 3px 3px 0 rgba(0,0,0,1),
+                -2px -2px 0 #cb4df9;
+        }
+    }
+}
+
+#log{
+    border: thin dotted #999;
+    overflow-y: scroll;
+    height: 200px;
+    width:  440px;
+    font-size: 17px;
+}
