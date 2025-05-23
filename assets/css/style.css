@@ -68,7 +68,7 @@ body{
             p{
                 background-color: #000;
                 height: 32px;
-                padding: 0 5%;
+                padding: 0 5px;
                 margin: 0;
                 border: 3px solid #9118bc;
                 font-size: 18px;
@@ -101,10 +101,23 @@ body{
     }
 }
 
+.character-name::first-letter{
+    text-transform: uppercase;
+}
+
 #log{
     border: thin dotted #999;
     overflow-y: scroll;
     height: 200px;
     width:  440px;
     font-size: 17px;
+}
+
+@media screen and (max-width: 500px) {
+    .fight-area,
+    #log{
+        width: 400px;
+        height: 300px;
+    }
+
 }
