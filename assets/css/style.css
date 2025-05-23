@@ -15,7 +15,7 @@ body{
 
 .fight-area{
     display: flex;
-    background: #f00 url("/assets/imgs/background.png") no-repeat;
+    background: #f00 url("assets/imgs/background.png") no-repeat;
     background-size: cover;
     width: 440px;
     height: 250px;
