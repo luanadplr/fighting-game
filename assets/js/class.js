@@ -74,18 +74,18 @@ class Stage{
         this.warriorEl.querySelector('.attack-value').innerHTML = `${this.warrior.attack}`
         this.warriorEl.querySelector('.defense-value').innerHTML = `${this.warrior.defense}`
         this.warriorEl.querySelector('.character-img')
-            .setAttribute('src', `../assets/imgs/characters/${this.warrior.name}/${this.warrior.name}-idle.gif`)
+            .setAttribute('src', `../imgs/characters/${this.warrior.name}/${this.warrior.name}-idle.gif`)
         this.warriorEl.querySelector('.character-icon')
-            .setAttribute('src', `../assets/imgs/characters/${this.warrior.name}/${this.warrior.name}-icon.png`)
+            .setAttribute('src', `../imgs/characters/${this.warrior.name}/${this.warrior.name}-icon.png`)
         
         // ENEMY
         this.enemyEl.querySelector('.character-name').innerHTML = `${this.enemy.name}`
         this.enemyEl.querySelector('.attack-value').innerHTML = `${this.enemy.attack}`
         this.enemyEl.querySelector('.defense-value').innerHTML = `${this.enemy.defense}`
         this.enemyEl.querySelector('.character-img')
-            .setAttribute('src', `../assets/imgs/characters/${this.enemy.name}/${this.enemy.name}-idle.gif`)
+            .setAttribute('src', `../imgs/characters/${this.enemy.name}/${this.enemy.name}-idle.gif`)
         this.enemyEl.querySelector('.character-icon')
-            .setAttribute('src', `../assets/imgs/characters/${this.enemy.name}/${this.enemy.name}-icon.png`)
+            .setAttribute('src', `../imgs/characters/${this.enemy.name}/${this.enemy.name}-icon.png`)
     }
 
     start(){
@@ -96,13 +96,13 @@ class Stage{
         this.warriorEl.querySelector('.attack-button').addEventListener('click', ()=> {
             this.doAttack(this.enemy, this.warrior, imgEnemy, imgWarrior)
             this.warriorEl.querySelector('.character-img')
-                .setAttribute('src', `../assets/imgs/characters/${this.warrior.name}/${this.warrior.name}-attack.gif`)
+                .setAttribute('src', `../imgs/characters/${this.warrior.name}/${this.warrior.name}-attack.gif`)
         })
 
         this.enemyEl.querySelector('.attack-button').addEventListener('click', ()=>{
             this.doAttack(this.warrior, this.enemy, imgWarrior, imgEnemy)
             this.enemyEl.querySelector('.character-img')
-                .setAttribute('src', `../assets/imgs/characters/${this.enemy.name}/${this.enemy.name}-attack.gif`)
+                .setAttribute('src', `../imgs/characters/${this.enemy.name}/${this.enemy.name}-attack.gif`)
         })
 
         this.update()
@@ -121,11 +121,11 @@ class Stage{
         // FIGHT END
         if(attacking.life <= 0){
             this.log.addMessage(`${attacking.name} MORREU`)
-            imgAttacking.setAttribute('src', `../assets/imgs/characters/${attacking.name}/${attacking.name}-death.gif`)
+            imgAttacking.setAttribute('src', `../imgs/characters/${attacking.name}/${attacking.name}-death.gif`)
             return
         } else if(attacked.life <= 0){
             this.log.addMessage(`${attacked.name} MORREU`)
-            imgAttacked.setAttribute('src', `../assets/imgs/characters/${attacked.name}/${attacked.name}-death.gif`)
+            imgAttacked.setAttribute('src', `../imgs/characters/${attacked.name}/${attacked.name}-death.gif`)
             return
         }
 
@@ -143,7 +143,7 @@ class Stage{
             this.log.addMessage(`${attacked.name} conseguiu se defender`)
         }
 
-        imgAttacked.setAttribute('src', `../assets/imgs/characters/${attacked.name}/${attacked.name}-idle.gif`)
+        imgAttacked.setAttribute('src', `../imgs/characters/${attacked.name}/${attacked.name}-idle.gif`)
 
         this.changeLife()
     }
