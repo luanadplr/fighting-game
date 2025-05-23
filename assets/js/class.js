@@ -21,7 +21,7 @@ class Character {
 
 class Knight extends Character{
     constructor(){
-        super('Knight')
+        super('knight')
         this._life = 100
         this.maxLife = this._life
         this.attack = 15
@@ -31,7 +31,7 @@ class Knight extends Character{
 
 class Wizard extends Character{
     constructor(){
-        super('Wizard')
+        super('wizard')
         this._life = 90
         this.maxLife = this._life
         this.attack = 10
@@ -41,7 +41,7 @@ class Wizard extends Character{
 
 class Fire extends Character{
     constructor(){
-        super('Fire')
+        super('fire')
         this._life = 80
         this.maxLife = this._life
         this.attack = 12
@@ -51,7 +51,7 @@ class Fire extends Character{
 
 class Orc extends Character{
     constructor(){
-        super('Orc')
+        super('orc')
         this._life = 120
         this.maxLife = this._life
         this.attack = 16
